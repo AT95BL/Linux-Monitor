@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  backend-api:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      # KLJUČNA STVAR: Montiramo /proc sa tvog laptopa u kontejner kao Read-Only.
+      # [cite_start]Ovo omogućava kontejneru da "vidi" tvoj CPU i RAM.
+      - /proc:/proc:ro
+    restart: always
+
+  dashboard-ui:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Potrebno za hot-reload na Linuxu unutar Dockera
+    depends_on:
+      - backend-api
