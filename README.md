@@ -1,7 +1,7 @@
 # 🐧 Linux System Monitor Dashboard
 
-A full-stack, real-time system monitoring application inspired by professional tools like **Zabbix** and **Prometheus**. T
-his project demonstrates the integration of low-level Linux kernel data extraction with modern web technologies and containerization.
+A full-stack, real-time system monitoring application inspired by professional tools like **Zabbix** and **Prometheus**. 
+This project demonstrates the integration of low-level Linux kernel data extraction with modern web technologies and containerization.
 
 ## 🚀 Technology Stack
 
