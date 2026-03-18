@@ -245,7 +245,7 @@ linux-monitor/
 **Andrej Trožić**
 - GitHub: [@AT95BL](https://github.com/AT95BL)
 - LinkedIn: [Andrej Trožić](https://linkedin.com/in/andrej-trožić)
-- Portfolio: [at95-portfolio.com](https://at95-portfolio.com)
+- Portfolio: [at95-portfolio.com](https://at95bl.github.io/html-portfolio/)
 
 ---
 
