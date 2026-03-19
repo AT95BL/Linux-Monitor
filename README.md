@@ -220,11 +220,11 @@ linux-monitor/
 
 > Dashboard — authenticated user
 
-![Dashboard](https://via.placeholder.com/800x450.png?text=Dashboard+Screenshot)
+![Dashboard](screenshots/dashboard.png)
 
 > Login screen with guest preview option
 
-![Login](https://via.placeholder.com/800x450.png?text=Login+Screenshot)
+![Login](screenshots/login.png)
 
 ---
 
