@@ -220,7 +220,11 @@ linux-monitor/
 
 > Dashboard — authenticated user
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard1.png)
+
+> Admin_Panel — admin user
+
+![Admin_Panel](screenshots/admin1.png)
 
 > Login screen with guest preview option
 
