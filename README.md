@@ -218,6 +218,14 @@ linux-monitor/
 
 ## Screenshots
 
+> Login screen with guest preview option
+
+![Login](screenshots/login.png)
+
+> Dashboard — unauthenticated user
+
+![Dashboard](screenshots/dashboard2.png)
+
 > Dashboard — authenticated user
 
 ![Dashboard](screenshots/dashboard1.png)
@@ -226,9 +234,7 @@ linux-monitor/
 
 ![Admin_Panel](screenshots/admin1.png)
 
-> Login screen with guest preview option
 
-![Login](screenshots/login.png)
 
 ---
 
