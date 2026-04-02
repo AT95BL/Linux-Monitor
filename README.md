@@ -220,7 +220,7 @@ linux-monitor/
 
 > Login screen with guest preview option
 
-![Login](screenshots/login.png)
+![Login](screenshots/login1.png)
 
 > Dashboard — unauthenticated user
 
