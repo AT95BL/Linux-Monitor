@@ -2,6 +2,7 @@ package com.andrej.linux_monitor.service;
 
 import com.andrej.linux_monitor.dto.AdminStatsDto;
 import com.andrej.linux_monitor.dto.UserSummaryDto;
+import com.andrej.linux_monitor.exception.ResourceNotFoundException;
 import com.andrej.linux_monitor.model.AuditLog;
 import com.andrej.linux_monitor.model.Role;
 import com.andrej.linux_monitor.model.User;
@@ -38,7 +39,7 @@ public class AdminService {
 
     public UserSummaryDto updateRole(Long userId, Role newRole) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("User with id " + userId + " not found"));
 
         String oldRole = user.getRole().name();
         user.setRole(newRole);
@@ -53,7 +54,7 @@ public class AdminService {
 
     public UserSummaryDto toggleStatus(Long userId) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("User with id " + userId + " not found"));
 
         user.setActive(!user.isActive());
         userRepository.save(user);

@@ -24,7 +24,7 @@ public class StatsController {
     }
 
     @GetMapping("/stats")
-    public ResponseEntity<StatsDto> getStats() throws Exception {
+    public ResponseEntity<StatsDto> getStats(){
         return ResponseEntity.ok(statsService.getCurrentStats());
     }
 

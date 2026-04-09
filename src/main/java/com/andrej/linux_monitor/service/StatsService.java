@@ -18,19 +18,25 @@ public class StatsService {
     @Value("${stats.script.path}")
     private String statsScriptPath;
 
-    public StatsDto getCurrentStats() throws Exception {
-        ProcessBuilder pb = new ProcessBuilder("python3", statsScriptPath);
-        pb.redirectErrorStream(false);
-        Process process = pb.start();
+    public StatsDto getCurrentStats() {
+        try {
+            ProcessBuilder pb = new ProcessBuilder("python3", statsScriptPath);
+            pb.redirectErrorStream(false);
+            Process process = pb.start();
 
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(process.getInputStream()));
-        StringBuilder output = new StringBuilder();
-        String line;
-        while ((line = reader.readLine()) != null) {
-            output.append(line);
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+            StringBuilder output = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                output.append(line);
+            }
+            process.waitFor();
+
+            return objectMapper.readValue(output.toString(), StatsDto.class);
+        } catch (Exception e) {
+            // Re-throw as a RuntimeException so the GlobalExceptionHandler catches it
+            throw new RuntimeException("Failed to retrieve Linux metrics: " + e.getMessage());
         }
-        process.waitFor();
-        return objectMapper.readValue(output.toString(), StatsDto.class);
     }
 }

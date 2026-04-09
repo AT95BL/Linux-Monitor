@@ -3,6 +3,7 @@ package com.andrej.linux_monitor.service;
 import com.andrej.linux_monitor.dto.AuthResponse;
 import com.andrej.linux_monitor.dto.LoginRequest;
 import com.andrej.linux_monitor.dto.RegisterRequest;
+import com.andrej.linux_monitor.exception.UserAlreadyExistsException;
 import com.andrej.linux_monitor.model.Role;
 import com.andrej.linux_monitor.model.User;
 import com.andrej.linux_monitor.repository.UserRepository;
@@ -25,10 +26,10 @@ public class AuthService {
 
     public AuthResponse register(RegisterRequest request) {
         if (userRepository.existsByUsername(request.getUsername())) {
-            throw new RuntimeException("Username already taken");
+            throw new UserAlreadyExistsException("Username '" + request.getUsername() + "' is already taken");
         }
         if (userRepository.existsByEmail(request.getEmail())) {
-            throw new RuntimeException("Email already registered");
+            throw new UserAlreadyExistsException("Email '" + request.getEmail() + "' is already registered");
         }
 
         User user = new User();
