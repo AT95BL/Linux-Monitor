@@ -12,13 +12,21 @@ A full-stack, real-time Linux system monitoring platform built with Java Spring 
 
 ![Login](screenshots/login.png)
 
-> Dashboard — real-time metrics, graphs, and process table
+> Dashboard Client — real-time metrics, graphs, and process table
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard Client](screenshots/dashboard.png)
+
+> Dashboard Admin — real-time metrics, graphs, and process table
+
+![Dashboard Admin](screenshots/dashboard1.png)
+
+> Dashboard Guest — real-time metrics, graphs, and process table
+
+![Dashboard Guest](screenshots/dashboard2.png)
 
 > Admin panel — user management, role control, audit log
 
-![Admin](screenshots/admin.png)
+![Admin](screenshots/admin1.png)
 
 ---
 
