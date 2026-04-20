@@ -10,7 +10,7 @@ A full-stack, real-time Linux system monitoring platform built with Java Spring 
 
 > Login screen — supports username/password and Google OAuth2
 
-![Login](screenshots/login.png)
+![Login](screenshots/login1.png)
 
 > Dashboard Client — real-time metrics, graphs, and process table
 
